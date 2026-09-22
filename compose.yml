@@ -1,0 +1,22 @@
+name: laravel_base
+services:
+  laravel:
+    build: .
+    ports:
+      - "80:80"
+      - "5173:5173"
+    volumes:
+      - ../:/var/www/html
+    depends_on:
+      - sql
+  sql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      MSSQL_SA_PASSWORD: "Jairmljoja24@"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+volumes:
+  sql_data:
