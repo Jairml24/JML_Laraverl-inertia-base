@@ -11,7 +11,7 @@ const form = useForm({
 </script>
 
 <template>
-    <AppLayout>
+    <AppLayout title="Inicio">
         <div class="flex gap-5">
             <VInput
                 label="Nombres"
@@ -26,7 +26,6 @@ const form = useForm({
                 v-model="form.apellidos"
             />
         </div>
-
         <VButton @click="() => form.reset()">Limpiar</VButton>
     </AppLayout>
 </template>
