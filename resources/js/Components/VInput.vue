@@ -16,7 +16,7 @@
     const { value, errorMessage, meta, handleBlur } = useField(
         () => props.name,
         props.rules,
-        { initialValue: props.modelValue , validateOnMount: false,}
+        { initialValue: props.modelValue, validateOnMount: false, label: props.label }
     )
 
     watch(value, (v) => {

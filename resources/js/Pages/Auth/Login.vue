@@ -12,7 +12,7 @@
     })
 
     const form = useForm({
-        email: '',
+        dni: '',
         password: '',
     })
 
@@ -34,12 +34,11 @@
                     <p class="text-sm text-slate-500 mb-8">Ingresá tus credenciales para continuar</p>
                     <VForm @submit="submit" class="space-y-5">
                         <VInput
-                            label="Correo electrónico"
-                            name="email"
-                            type="email"
-                            rules="required|email"
-                            v-model="form.email"
-                            :server-error="form.errors.email"
+                            label="Usuario"
+                            name="dni"
+                            rules="required"
+                            v-model="form.dni"
+                            :server-error="form.errors.dni"
                         />
                         <VInput
                             label="Contraseña"
